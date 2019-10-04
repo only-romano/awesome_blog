@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    {% block title %}AWESOME{% endblock title %}
+  </title>
+
+  <link rel="shortcut icon" type="image/x-icon"
+        href="{% static 'images/favicon.ico' %}">
+  <link rel="stylesheet" type="text/css"
+        href="{% static 'css/style.css' %}">
+
+  {% block style %}{% endblock style %}
+
+  <script src="{% static 'scripts/functions.js' %}"></script>
+</head>
+<body {% if scheme == 'night' %}class="red_scheme_body"{% endif %}>
+
+  <div class="header">
+  {% block header %}
+    <a class="header__menu_icon" onclick="toggleMenu()">
+      <span class="menu_h h1"></span><span class="menu_h h2"></span>
+      <span class="menu_h h3"></span><span class="menu_h h4"></span>
+    </a>
+
+    <h1 class="header__title">
+      {% block header_title %}{% endblock header_title %}
+    </h1>
+
+    <img class="header__logo"
+            {% if scheme == 'night' %}
+         src="{% static 'images/article/logo.png' %}"
+            {% else %}
+         src="{% static 'images/logo.png' %}"
+            {% endif %}>
+
+    <ul class="header__menu">
+      <li><a href="../index/?scheme={{ scheme }}">Главная страница</a></li>
+      <li><a href="../blog/?scheme={{ scheme }}">Блог</a></li>
+      <li><a href="../about/?scheme={{ scheme }}">Обо мне</a></li>
+      <li><a href="../resume/?scheme={{ scheme }}">История</a></li>
+      <li><a href="../developers/?scheme={{ scheme }}">Разработчики</a></li>
+    </ul>
+
+  {% endblock header %}
+  {% block addheader %}{% endblock addheader %}
+  </div>
+
+  <div class="content">
+  {% block content %}{% endblock content %}
+  </div>
+
+  <div class="footer">
+  {% block footer %}
+
+    <img class="footer__logo_me" alt="RSJ" title="R.S.J." name="logo"
+         src="{% static 'images/logo_me.png' %}">
+    <img class="footer__logo" name="logo" alt="logo"
+            {% if scheme == 'night' %}
+         src="{% static 'images/article/logo.png' %}"
+            {% else %}
+         src="{% static 'images/logo.png' %}"
+            {% endif %}>
+
+    <a class="footer__link" href="https://vk.com/katenkafelix" title="ВК"></a>
+    <img class="footer__down" src="{% static 'images/footer_down.png' %}">
+
+  {% endblock footer %}
+  </div>
+
+  <script src="{% static 'scripts/base_page_builder.js' %}"></script>
+
+  {% block script_builder %}{% endblock script_builder %}
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+.idea/
+__pycache__/
+venv/
+littleblog/__pycache__/
+nikolay/__pycache__/
