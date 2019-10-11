@@ -27,7 +27,7 @@ body {
 
 /* disclaimer */
 .content__disclaimer {
-  display: none;
+  display: block;
   position: relative;
   margin: 25px 0;
   border: 2px solid grey;
