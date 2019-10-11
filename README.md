@@ -1,11 +1,31 @@
-# Awesome blog
+# _Awesome Blog_
 
 [Available online](https://this-is-awesome.herokuapp.com/)
 
-> hosting takes time to load website, be patient. хостинг долго грузит сайт, будьте терпеливы.
+> Хостинг долго грузит сайт, будьте терпеливы. Hosting takes  a lot of time to load website, please be patient.
 
-#### Персональный блог с конструктором (micro-CMS), перебором анимаций, весёлыми находками (в той же анимации - имя авторизированного пользователя, анимация при регистрации, анимационные ролики на стартовой странице, затухающие чёрно-белые изображения на фоне изменения освещения и масштаба, анимация иконок)
+___
 
-##### Perosnal blog with micro-CMS, a lot of animations and funny stuff (as for me).
 
-> may 2018 (completed)
+###### RU
+
+#### Персональный блог с конструктором (micro-CMS), множеством анимаций.
+
+###### EN
+
+#### Blog-template with micro-CMS, a lot of animations included.
+
+___
+
+
+> Multytask website with Micro-CMS system
+
+* State: **RELEASE**
+* Stack:
+    + **Django** (Python)
+    + PostgreSQL
+    + only vanilla JS
+* _Stages_:
+    + Project start: 2018, Apr
+    + Release: 2018, Jun
+

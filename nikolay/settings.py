@@ -5,9 +5,6 @@ import dj_database_url
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'yp70px=jb-o%2!+529xiawp*wjqq=znhifp6wg#)ufg)wg%dda'
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
@@ -61,11 +58,11 @@ WSGI_APPLICATION = 'nikolay.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'awesome_db',
-        'USER': 'kato',
-        'PASSWORD': 'alabala',
+        'NAME': 'db_name', # db_name here
+        'USER': 'user', # username here
+        'PASSWORD': 'password', # user password here
         'HOST': '127.0.0.1',
-        'PORT': '5432',
+        'PORT': '5432', # db port here
     }
 }
 
